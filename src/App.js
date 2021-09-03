@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router ,Switch, Route} from 'react-router-dom' 
+import Home from './components/home';
+import Login from './components/login';
+import SignUp from './components/signup';
+import Navbar from './components/navbar';
+import { auth, firestore } from './firebase';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { userCreator } from './redux/actions/userActions';
 
 function App() {
+let  dispatch = useDispatch()
+useEffect(()=>{
+  let unsub=auth.onAuthStateChanged(async (user)=>{
+    dispatch(userCreator(user));
+    if(user){
+      let {uid,email}=user;
+      let docRef=firestore.collection("users").doc(uid);
+      if(!docRef.exists){
+        docRef.set({
+          email,
+        })
+      }
+    }
+  })
+
+  return ()=>{
+    unsub();
+  }
+},[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+    <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+   </>
   );
 }
 
