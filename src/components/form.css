@@ -13,3 +13,27 @@
 .personal-form,.qual-form {
   width: 50%;
 }
+
+.btn{
+  height: 50px;
+  width: 150px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.btn-wrapper{
+  display: flex;
+  position: fixed;
+  left: 25px;
+  bottom: 25px;
+}
+
+.btn:hover{
+  color:white;
+  background-color: teal;
+
+}
