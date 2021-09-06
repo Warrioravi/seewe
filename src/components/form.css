@@ -1,0 +1,15 @@
+.personal-container,.qual-container {
+  height: 92vh;
+  display: flex;
+}
+
+.personal-form,.qual-form {
+  width: 50%;
+}.personal-container,.qual-container {
+  height: 92vh;
+  display: flex;
+}
+
+.personal-form,.qual-form {
+  width: 50%;
+}

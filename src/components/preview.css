@@ -1,0 +1,12 @@
+.preview-container{
+    width: 50%;
+    border: 1px solid lightgray;
+} 
+
+.template-A {
+    color: red;
+  }
+  
+  .template-B {
+    color: blue;
+  }

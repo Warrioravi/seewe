@@ -4,6 +4,7 @@ import Login from './components/login';
 import SignUp from './components/signup';
 import Navbar from './components/navbar';
 import  PersonalData  from './components/personalData';
+import Qualifications from './components/qualifications';
 import { auth, firestore } from './firebase';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
@@ -35,6 +36,9 @@ useEffect(()=>{
     <Router>
         <Navbar />
         <Switch>
+        <Route path="/qualifications">
+            <Qualifications />
+          </Route>
           <Route path="/personal">
             <PersonalData />
           </Route>
