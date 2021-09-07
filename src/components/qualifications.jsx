@@ -3,6 +3,7 @@ import Preview from "./preview";
 import "./form.css";
 import { saveResume } from "../redux/actions/saveActions";
 
+
 import  detailCreator  from "../redux/actions/detailActions";
 import { useHistory } from "react-router";
 let Qualifications = () => {
@@ -12,6 +13,7 @@ let Qualifications = () => {
   let details = useSelector((state) => state.details);
   let code = useSelector((state) => state.template);
   let { uid } = useSelector((state) => state.user);
+  let { id } = useSelector((state) => state.saveState);
 
   return (
     <>
@@ -94,7 +96,10 @@ let Qualifications = () => {
         <Preview />
       </div>
       <div className="btn-wrapper">
-      <button className="btn ">Generate Link</button>
+      <button className="btn " 
+      onClick={() => {
+          alert(`localhost:3000/publicpreview/${id}`);
+        }}>Generate Link</button>
       <button className="btn " 
       onClick={() => {
         dispatch(saveResume(uid, details, code));}}

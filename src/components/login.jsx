@@ -47,7 +47,10 @@ let Login = () => {
             <button className="btn btn-primary"onClick={
               (e)=>{
                 e.preventDefault();
-                auth.signInWithEmailAndPassword(email,password);
+                auth.signInWithEmailAndPassword(email,password)
+                .catch((e)=> {
+                  alert(e);
+                });
               }
             }>Login</button>
             <br />

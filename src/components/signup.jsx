@@ -66,7 +66,8 @@ let SignUp = () => {
             <button className="btn btn-primary" onClick={(e)=>{
                 e.preventDefault();
                 if(password ===confirmPassword){
-                    auth.createUserWithEmailAndPassword(email,password);
+                    auth.createUserWithEmailAndPassword(email,password)
+                    .catch((e)=>{alert(e)});
                 }
 
             }}>Sign Up</button>

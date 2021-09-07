@@ -35,9 +35,11 @@ return (dispatch) =>{
         })
         .then((doc)=>{
             dispatch(saveCompletedCreator(doc.id));
+            alert("RESUME SAVED TO DATABASE")
         })
         .catch((err)=>{
             dispatch(saveErrCreator(err));
+            alert("COULD NOT SAVE! TRY AGAIN LATER")
         });
 
 };
