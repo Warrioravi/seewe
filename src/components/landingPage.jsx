@@ -1,10 +1,12 @@
+import { Redirect,useHistory } from "react-router-dom";
+
 import './landing.css'
 
 
 
 let LandingPage=()=>{
 
-
+  let history=useHistory();
 
 
 
@@ -19,17 +21,26 @@ let LandingPage=()=>{
      
     <div className="main-wrapper">
       <div className="header">
-          <h1>ResumeBuilder</h1>
+          <h1>SEEWE</h1>
+        <div className="header-links">
+        <div>Templates</div>
+        <div onClick={()=>{
+                history.push("/login")
+            }}>Login</div>
+        <div onClick={()=>{
+                history.push("/login")
+            }}>My Account</div>
+        </div>
       </div>
       <div className="main-content">
           
           <div className="resume-card">
-              <img src="http://localhost:3000/resume-animation.svg" height="50%" width="auto" alt="" />
+              <img id="main-image" src="http://localhost:3000/resume-animation.svg"   alt="" />
               <div className="card-content">
                   <div className="card-icons">
-                  <img src="http://localhost:3000/user.png" height="30%" width="auto" alt="" />
-                  <img src="http://localhost:3000/certificate.png" height="25%" width="auto" alt="" />
-                  <img src="http://localhost:3000/portfolio.png" height="25%" width="auto" alt="" />
+                  <div><img src="http://localhost:3000/user.png"   alt="" /></div>
+                  <div><img src="http://localhost:3000/certificate.png"   alt="" /></div>
+                  <div><img src="http://localhost:3000/portfolio.png"   alt="" /></div>
                </div>
                   <div className="card-lines">
                   <div></div>
@@ -42,7 +53,10 @@ let LandingPage=()=>{
                   </div>
               </div>
           </div>
-          <div className="get-started">
+          <div className="big">CHOOSE.  EDIT.  SHARE.</div>
+          <div className="get-started" onClick={()=>{
+                history.push("/signup")
+            }}>
               Get Started
           </div>
       </div>
