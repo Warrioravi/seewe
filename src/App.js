@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux';
 import { userCreator } from './redux/actions/userActions';
 import PublicPreview from './components/publicPreview';
 import LandingPage from "./components/landingPage";
+import Resume from"./components/resume"
 
 
 
@@ -37,9 +38,10 @@ useEffect(()=>{
 },[])
 
   return (
-   <>
+   <Resume/>
+
    
-    <Router>
+    /* <Router>
         
         <Switch>
         <Route path="/main">
@@ -71,8 +73,8 @@ useEffect(()=>{
             <Home/>
           </Route>
         </Switch>
-      </Router>
-   </>
+      </Router> */
+   
   );
 }
 

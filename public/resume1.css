@@ -1,0 +1,120 @@
+/* body{
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.wrapper{
+    margin-top: 100px;
+    margin-bottom:100px;
+    width:21.25cm;
+    min-height: 27.5cm;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 4px 18px 4px rgba(10,9,9,0.75);
+    -webkit-box-shadow: 5px 4px 18px 4px rgba(10,9,9,0.75);
+    -moz-box-shadow: 5px 4px 18px 4px rgba(10,9,9,0.75);
+    border: 1px solid rgb(110, 108, 108,.5);
+}
+.wrapper>div{
+    padding-left:0.5cm;
+    padding-right: 0.5cm;
+}
+.section-heading{
+   display: flex;
+   justify-content: left;
+   
+   align-items: center;
+   margin:0.2cm 0 .2cm 0;
+   font-size: 0.6cm;
+   font-weight: 600;
+}
+hr{
+    height: 1px;
+    
+
+    margin: 0;
+    background-color: rgb(95, 93, 93,.5);
+}
+.name{
+    font-size: 1.3cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+}
+.summary{
+    font-size: .6cm;
+    display: flex;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+}
+.personal-details{
+   display: flex;
+   justify-content: space-evenly;
+   
+}
+.personal-details>div{
+    font-style: italic;
+}
+.skillset{
+    display: flex;
+    padding-left:.8cm ;
+    padding-right:.8cm ;
+   align-items: center;
+   justify-content:space-evenly;
+   flex-wrap: wrap;
+}
+.skillset>div{
+   background-color: rgba(196, 193, 193, 0.486);
+   font-size:0.4cm ;
+   font-weight: 700;
+   border-radius: 0.1cm;
+   min-width: 2.5cm;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:.1cm;
+   margin: .1cm;
+
+
+}
+
+.exp-role,.ed-course{
+ font-size: 0.5cm;
+ font-weight: 550;
+}
+.exp-details,.project-details,.ed-details{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.compname,.college-name,.project-name,.ach-name{
+    font-weight: 500;
+    font-size: .4cm;
+}
+.timeline,.project-link{
+    font-size: .35cm;
+    font-style: italic;
+}
+.project-description,.exp-description,.ed-description{
+    font-size: .35cm;
+    margin-bottom: .2cm;
+}
+.ach-description{
+    font-size: .4cm;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.ach{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+}
+ */
